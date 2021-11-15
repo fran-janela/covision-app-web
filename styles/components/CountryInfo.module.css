@@ -1,0 +1,142 @@
+.container {
+  font-weight: bold;
+  border-top: 5px solid #f1f1f1;
+  height: 30vh;
+  margin: 7vh 5vw;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-rows: 5% 30% 15% 30% 20%;
+}
+
+.name {
+  display: flex;
+  grid-area: 2/2;
+  font-size: 2.2rem;
+  align-items: center;
+  margin: 0;
+}
+
+.population {
+  display: flex;
+  grid-area: 2/3;
+  font-weight: normal;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.confirmed {
+  grid-area: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-bottom: 2px solid #f1f1f1;
+  color: grey;
+  margin-right: 2vw;
+}
+.confirmed_data {
+  grid-area: 4/2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 60% 40%;
+}
+
+.confirmed_n {
+  font-size: 1.2rem;
+  grid-area: 1/1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0%;
+}
+.confirmed_n_unit {
+  font-size: 0.8rem;
+  grid-area: 2/1;
+  display: flex;
+  color: var(--lightgrey);
+  justify-content: center;
+  margin: 0%;
+}
+.confirmed_p {
+  font-size: 1.2rem;
+  grid-area: 1/2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0%;
+}
+.confirmed_p_unit {
+  font-size: 0.8rem;
+  grid-area: 2/2;
+  display: flex;
+  color: var(--lightgrey);
+  justify-content: center;
+  margin: 0%;
+}
+
+.deaths {
+  margin-left: 2vw;
+  color: grey;
+  grid-area: 3/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.deaths_data {
+  grid-area: 4/3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 60% 40%;
+}
+
+.deaths_n {
+  font-size: 1.2rem;
+  grid-area: 1/1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0%;
+  color: var(--red);
+}
+.deaths_n_unit {
+  font-size: 0.8rem;
+  grid-area: 2/1;
+  display: flex;
+  color: var(--lightgrey);
+  justify-content: center;
+  margin: 0%;
+}
+.deaths_p {
+  font-size: 1.2rem;
+  grid-area: 1/2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0%;
+}
+.deaths_p_unit {
+  font-size: 0.8rem;
+  grid-area: 2/2;
+  display: flex;
+  color: var(--lightgrey);
+  justify-content: center;
+  margin: 0%;
+}
+
+.bold_spaced {
+  padding-right: 0.5rem;
+}
+
+.lastReported {
+  display: flex;
+  grid-area: 5/3;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: normal;
+  color: grey;
+}
