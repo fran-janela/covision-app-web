@@ -6,7 +6,7 @@ export const Toolbar = () => {
   return (
     <div className={styles.main}>
       <div onClick={() => router.push("/")}>Home</div>
-      <div onClick={() => router.push("/search")}>Serach</div>
+      <div onClick={() => router.push("/search")}>Search</div>
       <div onClick={() => router.push("/bookmarks")}>Bookmarks</div>
       <div
         onClick={() =>

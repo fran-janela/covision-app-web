@@ -54,20 +54,24 @@ export const Bookmarks = () => {
           <div className={styles.main}>
             {cases.map((info, index) => (
               <div key={index} className={styles.case_container} id={index}>
+                <div className={styles.date}>
+                  {info.createdAt.split("T")[0]}
+                </div>
                 <h2 className={styles.country}>{info.country}</h2>
-                <h3 className={styles.province}>{info.region}</h3>
-                <p className={styles.confirmed}>{info.confirmed}</p>
-                <p className={styles.deaths}>{info.deaths}</p>
+                <p className={styles.region}>{info.region}</p>
+                <div className={styles.confirmed}>
+                  <p className={styles.confirmed_title}>CONFIRMED</p>
+                  <p className={styles.confirmed_data}>{info.confirmed}</p>
+                </div>
+                <div className={styles.deaths}>
+                  <p className={styles.deaths_title}>DEATHS</p>
+                  <p className={styles.deaths_data}>{info.deaths}</p>
+                </div>
                 <button
                   className={`btn ${styles.delete}`}
                   onClick={() => handleDelete(info)}
                 >
-                  <Image
-                    alt="Delete"
-                    src={trash}
-                    width="100vw"
-                    height="100vw"
-                  />
+                  <Image alt="Delete" src={trash} width={25} height={25} />
                 </button>
               </div>
             ))}

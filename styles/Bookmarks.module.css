@@ -10,7 +10,7 @@
   height: 100%;
   display: grid;
   grid-gap: 2vw;
-  grid-template: repeat(20, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(20, 1fr) / repeat(4, 1fr);
   grid-auto-flow: row;
   z-index: 1;
   padding: 2%;
@@ -21,24 +21,89 @@
   box-shadow: 0 7px 20px rgb(0 0 0 / 15%), 0 2px 3px rgb(0 0 0 / 22%);
   width: 100%;
   height: 12vw;
-  grid-auto-rows: 20% 30% 20% 30% auto;
-  grid-auto-columns: 10% 80% auto;
+  grid-auto-rows: 30% 10% 30% 30% auto;
+  grid-auto-columns: 15% 70% auto;
   overflow-wrap: anywhere;
+}
+
+.date {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  border-left: 1px solid var(--lightgrey);
 }
 
 .country {
   grid-area: 1/2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
 }
 
-.province {
+.region {
   grid-area: 2/2;
+  font-weight: normal;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin: 0;
 }
+
 .confirmed {
   grid-area: 3/2;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  margin: 0;
 }
+.confirmed_title {
+  color: var(--lightblue);
+  display: flex;
+  grid-area: 1/1;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  font-size: 0.8rem;
+}
+.confirmed_data {
+  display: flex;
+  grid-area: 2/1;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+}
+
 .deaths {
   grid-area: 4/2;
-  color: red;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  margin: 0;
+}
+
+.deaths_title {
+  color: var(--red);
+  display: flex;
+  grid-area: 1/1;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  font-size: 0.8rem;
+}
+.deaths_data {
+  display: flex;
+  grid-area: 2/1;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
 }
 
 .delete {

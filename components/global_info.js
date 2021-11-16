@@ -20,9 +20,9 @@ export const GlobalInfo = ({ data }) => {
           <b className={styles.bold_spaced}>Deaths: </b>
           <b className={styles.red_decor}>{data.deaths}</b>
         </p>
-        <p
-          className={styles.lastReported}
-        >{`Last Report: ${data.lastReported}`}</p>
+        <p className={styles.lastReported}>{`Last Report: ${
+          data.lastReported.split("T")[0]
+        }`}</p>
       </div>
     </div>
   );

@@ -30,7 +30,9 @@ export const CountryInfo = ({ data, population }) => {
         </p>
         <p className={styles.deaths_p_unit}>[%]</p>
       </div>
-      <div className={styles.lastReported}>{data.lastReported}</div>
+      <div className={styles.lastReported}>
+        {data.lastReported.split("T")[0]}
+      </div>
     </div>
   );
 };
