@@ -41,7 +41,7 @@ export const Search = () => {
   async function handleSubmit({ country, province, confirmed, deaths }) {
     const myApiResponse = await axios
       .post(
-        `https://covision-backend.herokuapp.com/api/bookmarks/`,
+        `http://127.0.0.1:8000/api/bookmarks/`,
         {
           country: country,
           region: province,

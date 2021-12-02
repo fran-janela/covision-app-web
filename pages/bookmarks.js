@@ -13,14 +13,11 @@ export const Bookmarks = () => {
 
   async function getCasesInfo() {
     const apiResponse = await axios
-      .get(
-        "https://covision-backend.herokuapp.com/api/bookmarks/?format=json",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      .get("http://127.0.0.1:8000/api/bookmarks/?format=json", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => res.data)
       .catch(() => null);
 
@@ -36,7 +33,7 @@ export const Bookmarks = () => {
   async function handleDelete({ id }) {
     console.log(id);
     const apiResponse = await axios.delete(
-      `https://covision-backend.herokuapp.com/api/bookmarks/${id}/`
+      `http://127.0.0.1:8000/api/bookmarks/${id}/`
     );
     window.location.reload();
   }
